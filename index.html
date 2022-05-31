@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Todo List</title>
+	<!-- CSSインポート -->
+	<link rel="stylesheet" href="main.css" />
+	<!-- End of CSS Import -->
+	<!-- フォント -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+	<!-- End of Fonts -->
+</head>
+<body>
+
+	<main class="app">
+		<!-- 挨拶 -->
+		<section class="greeting">
+			<h5 class="title">
+				今日もお疲れ様でした！<input type="text" id="name" placeholder="名前を記入する"/>
+			</h5>
+		</section>
+		<!-- End of Greeting -->
+		
+		<!-- 新規ToDo -->
+		<section class="create-todo">
+			<h3>忘れないうちToDoを記入しましょう！</h3>
+			<form id="new-todo-form">
+				<input 
+					type="text" 
+					placeholder="例、PPT作成"
+					name="content"
+					id="content" />
+				
+				<h2>カテゴリー</h2>
+				<div class="options">
+					<label>
+						<input type="radio" name="category" id="category1" value="プロジェクト関連" /> 
+						<span class="bubble business"></span>
+						<div>プロジェクト関連</div>
+					</label>
+					<label>
+						<input type="radio" name="category" id="category2" value="社内" />
+						<span class="bubble personal"></span>
+						<div>社内</div>
+					</label>
+				</div>
+
+				<input type="submit" value="追加する" />
+			</form>
+		</section>
+		<!-- End of New Todo -->
+
+		<!-- Todo List -->
+		<section class="todo-list">
+			<h2>ToDoリスト</h2>
+			<div class="list" id="todo-list"></div>
+		</section>
+		<!-- End of Todo List -->
+
+	</main>
+	<!-- End of App Wrapper -->
+
+	<!-- JS Import -->
+	<script src="main.js"></script>
+	<!-- End of JS Import -->
+</body>
+</html>
